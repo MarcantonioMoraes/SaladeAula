@@ -6,9 +6,9 @@ const prompt = rl.createInterface({
 loop()
 
 function loop(){
-    prompt.question ("Qual a sua nota: ", escreva1 =>{
-        prompt.question ("Qual a sua Segunda nota: ", escreva2 =>{
-            prompt.question("Qual a sua terceira nota: ", escreva3 =>{
+    prompt.question ("Informe a primeira nota: ", escreva1 =>{
+        prompt.question ("Informe a segunda nota: ", escreva2 =>{
+            prompt.question("Informe a terceira nota: ", escreva3 =>{
                 const nota1 = Number.parseInt(escreva1);
                 const nota2 = Number.parseInt(escreva2);
                 const nota3 = Number.parseInt(escreva3);
@@ -25,13 +25,13 @@ function loop(){
                     console.log("O valor deve ser maior ou igual a zero.");
                     loop();
                 }else if (media <= 6){
-                    console.log (`Sua nota é ${media.toFixed(2)}  e você foi REPROVADO!`);
+                    console.log (`Sua nota foi de ${media.toFixed(2)}  e você foi REPROVADO!`);
                     prompt.close();
                 }else if (media <= 8){
-                    console.log(`Sua nota foi ${media.toFixed(2)} e você passou na MÉDIA!`);
+                    console.log(`Sua nota foi de  ${media.toFixed(2)} e você passou na MÉDIA!`);
                     prompt.close();
                 }else {
-                    console.log(`Sua nota é ${media.toFixed(2)} e você foi APROVADO!`);
+                    console.log(`Sua nota foi de ${media.toFixed(2)} e você foi APROVADO!`);
                     prompt.close();
                 }
                 
