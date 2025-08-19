@@ -26,14 +26,15 @@ function loop(){
                     loop();
                 }else if (media <= 6){
                     console.log (`Sua nota é ${media.toFixed(2)}  e você foi REPROVADO!`);
-                    loop();
+                    prompt.close();
                 }else if (media <= 8){
                     console.log(`Sua nota foi ${media.toFixed(2)} e você passou na MÉDIA!`);
-                    loop();
+                    prompt.close();
                 }else {
                     console.log(`Sua nota é ${media.toFixed(2)} e você foi APROVADO!`);
+                    prompt.close();
                 }
-                prompt.close();
+                
 
             });
         });
