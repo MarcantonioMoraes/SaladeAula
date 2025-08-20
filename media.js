@@ -3,7 +3,7 @@ const prompt = rl.createInterface({
     input: process.stdin, output: process.stdout
 });
 
-loop()
+loop();
 
 function loop(){
     prompt.question ("Informe a primeira nota: ", escreva1 =>{
