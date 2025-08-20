@@ -13,10 +13,10 @@ function nota(pergunta) {
 }
 
 async function fim() {
-  const primeiraNota = await nota('Informe a nota do Primeiro trimestre: ');
-  const segundaNota = await nota('Informe a nota do Segundo trimestre: ');
-  const terceiraNota = await nota('Informe a nota do Terceiro trimestre: ');
-  const quartaNota = await nota('Informe a nota do Quarto trimestre: ');
+  const primeiraNota = await nota('Informe a nota do Primeiro Periodo: ');
+  const segundaNota = await nota('Informe a nota do Segundo Periodo: ');
+  const terceiraNota = await nota('Informe a nota do Terceiro Periodo: ');
+  const quartaNota = await nota('Informe a nota do Quarto Periodo: ');
   const media = (primeiraNota + segundaNota + terceiraNota + quartaNota) / 4;
 
   if ([primeiraNota, segundaNota, terceiraNota, quartaNota].some(n => isNaN(n))) {
