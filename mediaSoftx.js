@@ -22,7 +22,7 @@ async function fim() {
   if ([primeiraNota, segundaNota, terceiraNota, quartaNota].some(n => isNaN(n))) {
     console.log("Um dos campos não foi preenchido corretamente! Tente de novo!");
     console.log("Preencha com números (ex: 1, 2, 3, etc.), não por extenso (ex: um, dois, três, etc.)");
-    console.log("Preencha com números entre 0 e 10.");
+    console.log("Não Preencha com caracteres especiais (ex: !, @, #, etc.)");
     return fim();
   } else if ([primeiraNota, segundaNota, terceiraNota, quartaNota].some(n => n > 10)) {
     console.log("Preencha com números entre 0 e 10.");
