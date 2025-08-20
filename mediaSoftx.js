@@ -30,14 +30,11 @@ async function fim() {
   } else if ([primeiraNota, segundaNota, terceiraNota, quartaNota].some(n => n < 0)) {
     console.log("O valor deve ser maior ou igual a zero.");
     return fim();
-  } else if (media <= 6) {
-    console.log(`Sua nota foi de ${media.toFixed(2)} e você foi REPROVADO!`);
-    rl.close();
-  } else if (media <= 8) {
-    console.log(`Sua nota foi de ${media.toFixed(2)} e você passou na MÉDIA!`);
+  } else if (media <= 6.99) {
+    console.log(`Sua nota foi ${media.toFixed(2)} e você foi REPROVADO!`);
     rl.close();
   } else {
-    console.log(`Sua nota foi de ${media.toFixed(2)} e você foi APROVADO!`);
+    console.log(`PARABÉNS! Sua nota foi ${media.toFixed(2)} e você foi APROVADO!`);
     rl.close();
   }
 }
