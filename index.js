@@ -31,13 +31,21 @@ function nota(pergunta) {
 //         console.log (`Sua idade final é: ${idade}`)
 //     }
 //     rl.close();
-    const frutas = ["Maçã", "Banana", "Uva"];
+    // const frutas = ["Maçã", "Banana", "Uva"];
 
-    for (let fruta of frutas) {
-        console.log(`Fruta: ${fruta}`);
+    // for (let fruta of frutas) {
+    //     console.log(`Fruta: ${fruta}`);
+    // }
+    let pessoa = {
+        nome: "Marcos",
+        idade: 35,
+        cidade: "Recife",
     }
 
-
+    for (let chave in pessoa) {
+        console.log(`${chave} + ${pessoa[chave]}`);
+    }
+    rl.close();
 
 }
 perguntaIdade();
