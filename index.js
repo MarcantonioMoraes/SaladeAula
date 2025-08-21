@@ -12,7 +12,7 @@ function nota(pergunta) {
   });
 }
 
-// async function perguntaIdade(){
+ async function perguntaIdade(){
 //     const idade = await nota (`Qual sua idade? `);
 
 //     for (let i =1; i <= idade; i++){
@@ -21,17 +21,23 @@ function nota(pergunta) {
 //     rl.close();
 // }
 
-async function perguntaIdade(){
-    let idade = await nota (`Qual sua idade? `);
+//     let idade = await nota (`Qual sua idade? `);
 
-    do {
-        console.log (`Sua idade: ${idade}`)
-        ++idade;
+//     do {
+//         console.log (`Sua idade: ${idade}`)
+//         ++idade;
 
-    }while (idade <= 10){
-        console.log (`Sua idade final é: ${idade}`)
+//     }while (idade <= 10){
+//         console.log (`Sua idade final é: ${idade}`)
+//     }
+//     rl.close();
+    const frutas = ["Maçã", "Banana", "Uva"];
+
+    for (let fruta of frutas) {
+        console.log(`Fruta: ${fruta}`);
     }
-    rl.close();
-}
 
+
+
+}
 perguntaIdade();
