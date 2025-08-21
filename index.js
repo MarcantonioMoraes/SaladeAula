@@ -26,7 +26,7 @@ async function perguntaIdade(){
 
     do {
         console.log (`Sua idade: ${idade}`)
-        idade++;
+        ++idade;
 
     }while (idade <= 10){
         console.log (`Sua idade final é: ${idade}`)

@@ -38,5 +38,4 @@ async function fim() {
     rl.close();
   }
 }
-
 fim();
