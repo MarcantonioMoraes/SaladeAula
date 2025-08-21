@@ -24,10 +24,12 @@ function nota(pergunta) {
 async function perguntaIdade(){
     let idade = await nota (`Qual sua idade? `);
 
-    while (idade <= 10) {
-        console.log(`sua idade é: ${idade}`);
+    do {
+        console.log (`Sua idade: ${idade}`)
         idade++;
 
+    }while (idade <= 10){
+        console.log (`Sua idade final é: ${idade}`)
     }
     rl.close();
 }
