@@ -1,51 +1,62 @@
-const readline = require (`readline`);
+const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-function nota(pergunta) {
+function data_hora (pergunta) {
   return new Promise((resolve) => {
     rl.question(pergunta, (resposta) => {
-      resolve(Number(resposta));
+      resolve(resposta);
     });
   });
 }
 
- async function perguntaIdade(){
-//     const idade = await nota (`Qual sua idade? `);
+async function menu() {
+  while (true) {
+    console.log("Escolha uma opção:");
+    console.log("1 - Mostrar data");
+    console.log("2 - Mostrar hora");
+    console.log("n - Sair");
+    const opcao = await data_hora("Digite sua opção: ");
 
-//     for (let i =1; i <= idade; i++){
-//         console.log(`sua idade é: ${i}`);
-//     }
-//     rl.close();
-// }
-
-//     let idade = await nota (`Qual sua idade? `);
-
-//     do {
-//         console.log (`Sua idade: ${idade}`)
-//         ++idade;
-
-//     }while (idade <= 10){
-//         console.log (`Sua idade final é: ${idade}`)
-//     }
-//     rl.close();
-    // const frutas = ["Maçã", "Banana", "Uva"];
-
-    // for (let fruta of frutas) {
-    //     console.log(`Fruta: ${fruta}`);
-    // }
-    let pessoa = {
-        nome: "Marcos",
-        idade: 35,
-        cidade: "Recife",
+    switch(opcao) {
+      case "1": {
+        const date = new Date();
+        const dia = date.getDate();
+        const mes = date.getMonth() + 1;
+        const ano = date.getFullYear();
+        console.log(`Hoje é ${dia}/${mes}/${ano}`);
+        break;
+      }
+      case "2": {
+        const date = new Date();
+        const hora = date.getHours();
+        const minutos = date.getMinutes();
+        console.log(`Agora são ${hora} horas e ${minutos} minutos`);
+        break;
+      }
+      case "n": {
+        console.log("Saindo...");
+        rl.close();
+        return;
+      }
+      default: {
+        console.log(`${opcao} não é uma opção válida!`);
+      }
     }
-
-    for (let chave in pessoa) {
-        console.log(`${chave} + ${pessoa[chave]}`);
+    
+    const continuar = await data_hora("Deseja continuar? (s/n): ");
+    if (continuar.toLowerCase() === "n") {
+      console.log("Saindo...");
+      rl.close();
+      return;
+    } else if (continuar.toLowerCase() === "s") {
+      console.log("Continuando...");
+    } else {
+      console.log("Opção inválida! Voltando ao menu...");
     }
-    rl.close();
-
+  }
 }
-perguntaIdade();
+
+menu();
