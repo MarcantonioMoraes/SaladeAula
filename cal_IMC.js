@@ -19,21 +19,17 @@ function perguntar(pergunta) {
     });
 }
 
-function calcularIMC(peso, altura) {
-    return (peso / (altura * altura));
-}
-
 async function IMC() {
-    let peso = await perguntar('Digite seu peso em kg: ');
-    let altura = await perguntar('Digite sua altura em metros: ');
+    let peso = await perguntar('Digite seu peso em kg (ex.: 80): ');
+    let altura = await perguntar('Digite sua altura em metros (ex.: 1.75 ou 1,75): ');
 
     while (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
         console.log("Por favor, insira valores numéricos válidos e maiores que zero.");
-        peso = await perguntar('Digite seu peso em kg: ');
-        altura = await perguntar('Digite sua altura em metros: ');
+        peso = await perguntar('Digite seu peso em kg (ex.: 80): ');
+        altura = await perguntar('Digite sua altura em metros (ex.: 1.75 ou 1,75): ');
     }
 
-    const imc = calcularIMC(peso, altura);
+    const imc = (peso / (altura * altura));
     console.log(`Seu IMC é: ${imc.toFixed(2)}`);
 
     if (imc < 18.5) {
