@@ -32,12 +32,12 @@ async function cobrança() {
     console.log(`Bem Vindo ao Estacionamento Marcos Park Sr(a) ${nome}`);
     console.log(`Aqui cobramos o valor de R$ 5,00 a hora`);
     let horas = await perguntar("Quantas horas você ficou estacionado?: ");
-    let valor = Number(horas) * 5;
+    let valor = Number((horas) * 5) + 5;
 
     while (isNaN(valor) || valor < 0) {
         console.log("Valor inválido");
         horas = await perguntar("Quantas horas você ficou estacionado?: ");
-        valor = Number(horas) * 5;
+        valor = Number((horas) * 5) + 5;
     }
 
     console.log(`O valor total a ser pago é R$ ${valor},00`);
