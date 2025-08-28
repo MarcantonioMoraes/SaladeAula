@@ -17,7 +17,7 @@
 // function perguntar(pergunta) {
 //     return new Promise((resolve) => {
 //         prompt.question(pergunta, (resposta) => {
-//             const valor = Number(resposta.replace(',', '.'));
+//          const valor = Number(resposta.replace(',', '.'));
 //             resolve(valor);
 //         });
 //     });
