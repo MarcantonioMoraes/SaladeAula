@@ -100,29 +100,69 @@
 // carro2.mostraInfo();
 //////////////////////////////////////////////////////////////////
 // Exercicio 2
-class livro {
-    constructor(titulo, autor) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.emprestado = false;
+// class livro {
+//     constructor(titulo, autor) {
+//         this.titulo = titulo;
+//         this.autor = autor;
+//         this.emprestado = false;
+//     }
+// }
+
+// class aluno {
+//     constructor(nome) {
+//         this.nome = nome;
+//     }
+//     emprestarLivro(livro) {
+//         livro.emprestado = true;
+//     }
+// }
+
+// const livro1 = new livro("Os Miseráveis", "Victor Hugo");
+// const livro2 = new livro("1984", "George Orwell");
+// const aluno1 = new aluno("Marcos");
+
+// aluno1.emprestarLivro(livro1);
+
+// console.log(`O livro ${livro1.titulo} do autor ${livro1.autor} está emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
+// console.log(`O livro ${livro2.titulo} do autor ${livro2.autor} está emprestado? ${livro2.emprestado ? "Sim" : "Não"}`);
+// console.log(`O aluno ${aluno1.nome} pegou o livro emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
+//////////////////////////////////////////////////////////////////
+// Exercicio 4
+class Carro{
+    constructor(placa,cor){
+        this.placa = placa;
+        this.cor = cor;
+    };
+};
+
+
+class Estacionamento{
+    constructor(){
+        this.vagas = [] // [] array vazio
     }
-}
-
-class aluno {
-    constructor(nome) {
-        this.nome = nome;
+    // metodo para adicionar carro
+    adicionarCarro(carro){
+        this.vagas.push(carro);
     }
-    emprestarLivro(livro) {
-        livro.emprestado = true;
-    }
-}
+    // metodo para listar carros
+    listaCarros(){
+        return this.vagas;
+    };
+};
 
-const livro1 = new livro("Os Miseráveis", "Victor Hugo");
-const livro2 = new livro("1984", "George Orwell");
-const aluno1 = new aluno("Marcos");
 
-aluno1.emprestarLivro(livro1);
+const carro1 = new Carro ("GPS7A58","VERDE");
+const carro2 = new Carro ("RTV5D87","AMARELO");
+const carro3 = new Carro ("SDS3C12","AZUL");
+const est1andar = new Estacionamento();
+const est2andar = new Estacionamento();
 
-console.log(`O livro ${livro1.titulo} do autor ${livro1.autor} está emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
-console.log(`O livro ${livro2.titulo} do autor ${livro2.autor} está emprestado? ${livro2.emprestado ? "Sim" : "Não"}`);
-console.log(`O aluno ${aluno1.nome} pegou o livro emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
+est1andar.adicionarCarro(carro1);
+
+est2andar.adicionarCarro(carro2);
+est2andar.adicionarCarro(carro3);
+
+console.log(
+  `Estacionamento do primeiro andar: ${est1andar.listaCarros().map(carro => `${carro.placa} (${carro.cor})`).join(', ')}, ` +
+  `estacionamento segundo andar: ${est2andar.listaCarros().map(carro => `${carro.placa} (${carro.cor})`).join(', ')}`
+);
