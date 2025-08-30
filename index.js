@@ -23,10 +23,10 @@ class contaBancaria{
         this.saldo = saldo;
     }
     depositarSaldo(depositar){
-        this.saldo + depositar
+        this.saldo += depositar;
     }
     sacarSaldo(sacar){
-        this.saldo - sacar
+        this.saldo -= sacar;
     }
     mostraSaldo(){
         console.log (`Seu saldo é de ${this.saldo}`)
