@@ -89,10 +89,10 @@ class carro{
 
 const carro1 = new carro ("Ford","Vermelho",2015);
 const carro2 = new carro ("Chevrolet","Azul",2020);
+
 carro2.velocidade = 50;
 
 carro1.acelerar();
-carro1.mostraInfo();
-
 carro2.frear();
+carro1.mostraInfo();
 carro2.mostraInfo();
