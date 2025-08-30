@@ -16,7 +16,8 @@
 // jogador1.ganharExperiencia(10*3)
 
 // console.log(`${jogador1.nome} tem ${jogador1.experiencia} pontos`)
-
+///////////////////////////////////////////////////////////////////////////
+// Exercicio 3
 // class contaBancaria{
 //     constructor(titular,saldo){
 //         this.titular = titular;
@@ -68,31 +69,60 @@
 //     prompt.close();
 // }
 // contaBancaria1();
+////////////////////////////////////////////////////////////////////////////
+// Exercicio 1
+// class carro{
+//     constructor (marca,cor,ano){
+//     this.marca = marca;
+//     this.cor = cor;
+//     this.ano = ano;
+//     this.velocidade = 0;
+//     }
+//     acelerar(){
+//         this.velocidade += 10;
+//     }
+//     frear(){
+//         this.velocidade -= 10;
+//     }
+//     mostraInfo(){
+//         console.log(`O veiculo da marca: ${this.marca} de cor: ${this.cor} do ano: ${this.ano} está á ${this.velocidade} km!`);
+//     }
+// }
 
-class carro{
-    constructor (marca,cor,ano){
-    this.marca = marca;
-    this.cor = cor;
-    this.ano = ano;
-    this.velocidade = 0;
-    }
-    acelerar(){
-        this.velocidade += 10;
-    }
-    frear(){
-        this.velocidade -= 10;
-    }
-    mostraInfo(){
-        console.log(`O veiculo da marca: ${this.marca} de cor: ${this.cor} do ano: ${this.ano} está á ${this.velocidade} km!`);
+// const carro1 = new carro ("Ford","Vermelho",2015);
+// const carro2 = new carro ("Chevrolet","Azul",2020);
+
+// carro2.velocidade = 50;
+
+// carro1.acelerar();
+// carro2.frear();
+// carro1.mostraInfo();
+// carro2.mostraInfo();
+//////////////////////////////////////////////////////////////////
+// Exercicio 2
+class livro {
+    constructor(titulo, autor) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.emprestado = false;
     }
 }
 
-const carro1 = new carro ("Ford","Vermelho",2015);
-const carro2 = new carro ("Chevrolet","Azul",2020);
+class aluno {
+    constructor(nome) {
+        this.nome = nome;
+    }
+    emprestarLivro(livro) {
+        livro.emprestado = true;
+    }
+}
 
-carro2.velocidade = 50;
+const livro1 = new livro("Os Miseráveis", "Victor Hugo");
+const livro2 = new livro("1984", "George Orwell");
+const aluno1 = new aluno("Marcos");
 
-carro1.acelerar();
-carro2.frear();
-carro1.mostraInfo();
-carro2.mostraInfo();
+aluno1.emprestarLivro(livro1);
+
+console.log(`O livro ${livro1.titulo} do autor ${livro1.autor} está emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
+console.log(`O livro ${livro2.titulo} do autor ${livro2.autor} está emprestado? ${livro2.emprestado ? "Sim" : "Não"}`);
+console.log(`O aluno ${aluno1.nome} pegou o livro emprestado? ${livro1.emprestado ? "Sim" : "Não"}`);
