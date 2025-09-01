@@ -11,11 +11,11 @@ console.log(`${jogador1.nome} tem ${jogador1.experiencia} pontos`)
 
 // Exercicio 3
 // import { contaBancaria } from "./poo.mjs";
-// import readline from 'readline';
+//const readline = require('readline');
 
-// const prompt = readline.createInterface({
-//     input: process.stdin, output: process.stdout
-// });
+//const prompt = readline.createInterface({
+    input: process.stdin, output: process.stdout
+//});
 
 // function perguntar(pergunta) {
 //     return new Promise((resolve) => {

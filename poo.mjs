@@ -82,8 +82,6 @@ export class contaBancaria {
     }
 }
 
-export const readline = require('readline');
-
 export class player {
     constructor (nome,idade,classe){
         this.nome = nome;
