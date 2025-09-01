@@ -1,20 +1,20 @@
-import { player } from "./poo.mjs";
+// import { player } from "./poo.mjs";
 
-const jogador1 = new player ("Marcos",35,"Mago")
-const jogador2 = new player ("Bruno",25,"Barbaro")
+// const jogador1 = new player ("Marcos",35,"Mago")
+// const jogador2 = new player ("Bruno",25,"Barbaro")
 
-jogador1.ganharExperiencia(10*3)
+// jogador1.ganharExperiencia(10*3)
 
-console.log(`${jogador1.nome} tem ${jogador1.experiencia} pontos`)
+// console.log(`${jogador1.nome} tem ${jogador1.experiencia} pontos`)
 
 //////////////////////////////////////////////////////////////////////////
 
 // Exercicio 3
 // import { contaBancaria } from "./poo.mjs";
-//const readline = require('readline');
 
+//const readline = require('readline');
 //const prompt = readline.createInterface({
-    input: process.stdin, output: process.stdout
+//     input: process.stdin, output: process.stdout
 //});
 
 // function perguntar(pergunta) {
