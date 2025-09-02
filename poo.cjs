@@ -1,4 +1,4 @@
-export class Carro{
+export  class Carro{
     constructor(placa,cor){
         this.placa = placa;
         this.cor = cor;
@@ -17,9 +17,9 @@ export class Estacionamento{
     listaCarros(){
         return this.vagas;
     };
-};
+}; 
 
-export class Livro{
+export  class Livro{
     constructor(titulo, autor) {
         this.titulo = titulo;
         this.autor = autor;

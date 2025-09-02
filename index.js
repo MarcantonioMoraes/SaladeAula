@@ -10,38 +10,39 @@
 //////////////////////////////////////////////////////////////////////////
 
 // Exercicio 3
-// import { contaBancaria } from "./poo.mjs";
+//import {contaBancaria} from "./poo.cjs";
+const {contaBancaria} = package;
 
-//const readline = require('readline');
-//const prompt = readline.createInterface({
-//     input: process.stdin, output: process.stdout
-//});
+const readline = require('readline');
+const prompt = readline.createInterface({
+    input: process.stdin, output: process.stdout
+});
 
-// function perguntar(pergunta) {
-//     return new Promise((resolve) => {
-//         prompt.question(pergunta, (resposta) => {
-//             const valor = Number(resposta.replace(',', '.'));
-//             resolve(valor);
-//         });
-//     });
-// }
+function perguntar(pergunta) {
+    return new Promise((resolve) => {
+        prompt.question(pergunta, (resposta) => {
+            const valor = Number(resposta.replace(',', '.'));
+            resolve(valor);
+        });
+    });
+}
 
-// const usuario1 = new contaBancaria("Marcos", 1000);
+const usuario1 = new contaBancaria("Marcos", 1000);
 
-// async function contaBancaria1() {
-//     let depositar = await perguntar('Qual valor você deseja depositar? ');
-//     usuario1.depositarSaldo(depositar);
+async function contaBancaria1() {
+    let depositar = await perguntar('Qual valor você deseja depositar? ');
+    usuario1.depositarSaldo(depositar);
 
-//     let sacar = await perguntar('Qual valor você deseja sacar? ');
-//     usuario1.sacarSaldo(sacar);
+    let sacar = await perguntar('Qual valor você deseja sacar? ');
+    usuario1.sacarSaldo(sacar);
 
-//     usuario1.mostraSaldo();
+    usuario1.mostraSaldo();
 
-//     console.log(`O Sr ${usuario1.titular} depositou ${depositar}`);
-//     console.log(`O Sr ${usuario1.titular} sacou ${sacar}`);
-//     prompt.close();
-// }
-// contaBancaria1();
+    console.log(`O Sr ${usuario1.titular} depositou ${depositar}`);
+    console.log(`O Sr ${usuario1.titular} sacou ${sacar}`);
+    prompt.close();
+}
+contaBancaria1();
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -76,10 +77,9 @@
 
 //////////////////////////////////////////////////////////////////
 
-// Exercicio 4
-// import {Carro} from './poo.mjs';
-// import {Estacionamento} from './poo.mjs';
-
+//Exercicio 4
+// import {Carro} from './poo.js';
+// import {Estacionamento} from './poo.js';
 
 // const carro1 = new Carro ("GPS7A58","VERDE");
 // const carro2 = new Carro ("RTV5D87","AMARELO");
