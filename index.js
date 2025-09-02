@@ -9,59 +9,24 @@
 
 //////////////////////////////////////////////////////////////////////////
 
-// Exercicio 3
-//import {contaBancaria} from "./poo.cjs";
-const {contaBancaria} = package;
+// Exercicio 1
 
-const readline = require('readline');
-const prompt = readline.createInterface({
-    input: process.stdin, output: process.stdout
-});
+import {Carroo} from "./poo.js";
 
-function perguntar(pergunta) {
-    return new Promise((resolve) => {
-        prompt.question(pergunta, (resposta) => {
-            const valor = Number(resposta.replace(',', '.'));
-            resolve(valor);
-        });
-    });
-}
+const carro1 = new Carroo ("Ford","Vermelho",2015);
+const carro2 = new Carroo ("Chevrolet","Azul",2020);
 
-const usuario1 = new contaBancaria("Marcos", 1000);
+carro2.velocidade = 50;
 
-async function contaBancaria1() {
-    let depositar = await perguntar('Qual valor você deseja depositar? ');
-    usuario1.depositarSaldo(depositar);
-
-    let sacar = await perguntar('Qual valor você deseja sacar? ');
-    usuario1.sacarSaldo(sacar);
-
-    usuario1.mostraSaldo();
-
-    console.log(`O Sr ${usuario1.titular} depositou ${depositar}`);
-    console.log(`O Sr ${usuario1.titular} sacou ${sacar}`);
-    prompt.close();
-}
-contaBancaria1();
-
-////////////////////////////////////////////////////////////////////////////
-
- // Exercicio 1
-// import {Carroo} from "./poo.mjs";
-
-// const carro1 = new Carroo ("Ford","Vermelho",2015);
-// const carro2 = new Carroo ("Chevrolet","Azul",2020);
-
-// carro2.velocidade = 50;
-
-// carro1.acelerar();
-// carro2.frear();
-// carro1.mostraInfo();
-// carro2.mostraInfo();
+carro1.acelerar();
+carro2.frear();
+carro1.mostraInfo();
+carro2.mostraInfo();
 
 ////////////////////////////////////////////////////////////////
 
 //Exercicio 2
+
 // import { Livro } from "./poo.mjs";
 // import { Aluno } from "./poo.mjs";
 
@@ -78,6 +43,7 @@ contaBancaria1();
 //////////////////////////////////////////////////////////////////
 
 //Exercicio 4
+
 // import {Carro} from './poo.js';
 // import {Estacionamento} from './poo.js';
 

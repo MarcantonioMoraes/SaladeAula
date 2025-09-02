@@ -54,34 +54,6 @@ export class Carroo{
     }
 }
 
-export class contaBancaria {
-    constructor(titular, saldo) {
-        this.titular = titular;
-        this.saldo = saldo;
-    }
-    depositarSaldo(depositar) {
-        if (isNaN(depositar) || depositar <= 0) {
-            console.log("Valor de depósito inválido!");
-            return;
-        }
-        this.saldo += depositar;
-    }
-    sacarSaldo(sacar) {
-        if (isNaN(sacar) || sacar <= 0) {
-            console.log("Valor de saque inválido!");
-            return;
-        }
-        if (sacar > this.saldo) {
-            console.log("Saldo insuficiente!");
-            return;
-        }
-        this.saldo -= sacar;
-    }
-    mostraSaldo() {
-        console.log(`Seu saldo é de ${this.saldo}`);
-    }
-}
-
 export class player {
     constructor (nome,idade,classe){
         this.nome = nome;
