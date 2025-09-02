@@ -1,4 +1,4 @@
-// import { player } from "./poo.mjs";
+// import { player } from "./poo.js";
 
 // const jogador1 = new player ("Marcos",35,"Mago")
 // const jogador2 = new player ("Bruno",25,"Barbaro")
@@ -11,24 +11,24 @@
 
 // Exercicio 1
 
-import {Carroo} from "./poo.js";
+// import {Carroo} from "./poo.js";
 
-const carro1 = new Carroo ("Ford","Vermelho",2015);
-const carro2 = new Carroo ("Chevrolet","Azul",2020);
+// const carro1 = new Carroo ("Ford","Vermelho",2015);
+// const carro2 = new Carroo ("Chevrolet","Azul",2020);
 
-carro2.velocidade = 50;
+// carro2.velocidade = 50;
 
-carro1.acelerar();
-carro2.frear();
-carro1.mostraInfo();
-carro2.mostraInfo();
+// carro1.acelerar();
+// carro2.frear();
+// carro1.mostraInfo();
+// carro2.mostraInfo();
 
 ////////////////////////////////////////////////////////////////
 
 //Exercicio 2
 
-// import { Livro } from "./poo.mjs";
-// import { Aluno } from "./poo.mjs";
+// import { Livro } from "./poo.js";
+// import { Aluno } from "./poo.js";
 
 // const livro1 = new Livro("Os Miseráveis", "Victor Hugo");
 // const livro2 = new Livro("1984", "George Orwell");
