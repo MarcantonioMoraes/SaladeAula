@@ -43,7 +43,8 @@ class contaBancaria {
 const usuario1 = new contaBancaria("Marcos", 1000);
 
 async function contaBancaria1() {
-    let depositar = await perguntar('Qual valor você deseja depositar? ');
+    
+    let depositar = await perguntar('Qual valor você deseja depositar? '); 
     usuario1.depositarSaldo(depositar);
     usuario1.mostraSaldo();
 
