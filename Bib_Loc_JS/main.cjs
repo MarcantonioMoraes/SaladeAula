@@ -6,11 +6,11 @@ class Livro{
         this.emprestado = false;
     }
     emprestar() {
-        if (!this.emprestado) {
-            this.emprestado = true;
-            console.log(`O Livro: ${this.titulo}, do autor: ${this.autor} foi emprestado!`);
-        } else {
+        if (this.emprestado) {
             console.log(`O Livro: ${this.titulo}, do autor: ${this.autor} não está disponível, pois está emprestado!`);
+        } else {
+             this.emprestado = true;
+            console.log(`O Livro: ${this.titulo}, do autor: ${this.autor} foi emprestado!`);      
         }
     }
     devolver() {
@@ -65,6 +65,7 @@ class Usuario{
         }
     }
     devolveritem(item) {
+       //const itemdevolvido = this.itensEmprestados.find(i => i.titulo === item.titulo);
         const index = this.itensEmprestados.indexOf(item);
         if (item.emprestado) {
             item.devolver();
@@ -115,6 +116,9 @@ const B1 = new Biblioteca();
 const L1 = new Locadora();
 const usuarios = [];
 
+const livro8 = new Livro("O Pequeno Príncipe", "Antoine de Saint-Exupéry");
+B1.adicionarLivro(livro8);
+
 B1.adicionarLivro(new Livro("Os Miseráveis", "Victor Hugo."));
 B1.adicionarLivro(new Livro("1984", "George Orwell"));
 B1.adicionarLivro(new Livro("A Cabana", "William P."));
@@ -156,6 +160,7 @@ async function MostraMenu(){
     console.log("0. Sair");
 
     while(true){
+        
         const opcao = await perguntar("Escolha uma opção: ");
 
         switch(opcao) {
